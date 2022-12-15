@@ -43,13 +43,22 @@
             this.btnMaisSegundos = new System.Windows.Forms.Button();
             this.btnMenosSegundos = new System.Windows.Forms.Button();
             this.timerRelogio = new System.Windows.Forms.Timer(this.components);
+            this.labelPomoHoras = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelPomoMinutos = new System.Windows.Forms.Label();
+            this.btnPomodoro = new System.Windows.Forms.Button();
+            this.btnOkPomo = new System.Windows.Forms.Button();
+            this.btnPomoMaisMinutos = new System.Windows.Forms.Button();
+            this.btnPomoMenosMinutos = new System.Windows.Forms.Button();
+            this.btnPomoMaisHoras = new System.Windows.Forms.Button();
+            this.btnPomoMenosHoras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labHoras
             // 
             this.labHoras.AutoSize = true;
             this.labHoras.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labHoras.Location = new System.Drawing.Point(79, 81);
+            this.labHoras.Location = new System.Drawing.Point(79, 31);
             this.labHoras.Name = "labHoras";
             this.labHoras.Size = new System.Drawing.Size(137, 112);
             this.labHoras.TabIndex = 0;
@@ -59,7 +68,7 @@
             // 
             this.labMinutos.AutoSize = true;
             this.labMinutos.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labMinutos.Location = new System.Drawing.Point(293, 81);
+            this.labMinutos.Location = new System.Drawing.Point(293, 31);
             this.labMinutos.Name = "labMinutos";
             this.labMinutos.Size = new System.Drawing.Size(137, 112);
             this.labMinutos.TabIndex = 1;
@@ -69,7 +78,7 @@
             // 
             this.labSegundos.AutoSize = true;
             this.labSegundos.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labSegundos.Location = new System.Drawing.Point(489, 81);
+            this.labSegundos.Location = new System.Drawing.Point(489, 31);
             this.labSegundos.Name = "labSegundos";
             this.labSegundos.Size = new System.Drawing.Size(137, 112);
             this.labSegundos.TabIndex = 2;
@@ -79,18 +88,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(222, 72);
+            this.label4.Location = new System.Drawing.Point(222, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 112);
             this.label4.TabIndex = 3;
             this.label4.Text = ":";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(427, 81);
+            this.label5.Location = new System.Drawing.Point(427, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 112);
             this.label5.TabIndex = 4;
@@ -98,19 +106,21 @@
             // 
             // btnAjustar
             // 
-            this.btnAjustar.Location = new System.Drawing.Point(308, 282);
+            this.btnAjustar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAjustar.Location = new System.Drawing.Point(287, 202);
             this.btnAjustar.Name = "btnAjustar";
-            this.btnAjustar.Size = new System.Drawing.Size(103, 29);
+            this.btnAjustar.Size = new System.Drawing.Size(140, 45);
             this.btnAjustar.TabIndex = 5;
-            this.btnAjustar.Text = "AJUSTAR";
+            this.btnAjustar.Text = "AJUSTAR HORA";
             this.btnAjustar.UseVisualStyleBackColor = true;
             this.btnAjustar.Click += new System.EventHandler(this.btnAjustar_Click);
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(308, 339);
+            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOk.Location = new System.Drawing.Point(287, 203);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(103, 29);
+            this.btnOk.Size = new System.Drawing.Size(140, 43);
             this.btnOk.TabIndex = 6;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -119,7 +129,7 @@
             // 
             // btnMenosHotas
             // 
-            this.btnMenosHotas.Location = new System.Drawing.Point(103, 183);
+            this.btnMenosHotas.Location = new System.Drawing.Point(103, 133);
             this.btnMenosHotas.Name = "btnMenosHotas";
             this.btnMenosHotas.Size = new System.Drawing.Size(32, 29);
             this.btnMenosHotas.TabIndex = 9;
@@ -130,7 +140,7 @@
             // 
             // btnMaisHoras
             // 
-            this.btnMaisHoras.Location = new System.Drawing.Point(149, 183);
+            this.btnMaisHoras.Location = new System.Drawing.Point(149, 133);
             this.btnMaisHoras.Name = "btnMaisHoras";
             this.btnMaisHoras.Size = new System.Drawing.Size(32, 29);
             this.btnMaisHoras.TabIndex = 10;
@@ -141,7 +151,7 @@
             // 
             // btnMaisMinutos
             // 
-            this.btnMaisMinutos.Location = new System.Drawing.Point(363, 183);
+            this.btnMaisMinutos.Location = new System.Drawing.Point(363, 133);
             this.btnMaisMinutos.Name = "btnMaisMinutos";
             this.btnMaisMinutos.Size = new System.Drawing.Size(32, 29);
             this.btnMaisMinutos.TabIndex = 12;
@@ -152,7 +162,7 @@
             // 
             // btnMenosMinutos
             // 
-            this.btnMenosMinutos.Location = new System.Drawing.Point(317, 183);
+            this.btnMenosMinutos.Location = new System.Drawing.Point(317, 133);
             this.btnMenosMinutos.Name = "btnMenosMinutos";
             this.btnMenosMinutos.Size = new System.Drawing.Size(32, 29);
             this.btnMenosMinutos.TabIndex = 11;
@@ -163,7 +173,7 @@
             // 
             // btnMaisSegundos
             // 
-            this.btnMaisSegundos.Location = new System.Drawing.Point(560, 183);
+            this.btnMaisSegundos.Location = new System.Drawing.Point(560, 133);
             this.btnMaisSegundos.Name = "btnMaisSegundos";
             this.btnMaisSegundos.Size = new System.Drawing.Size(32, 29);
             this.btnMaisSegundos.TabIndex = 14;
@@ -174,7 +184,7 @@
             // 
             // btnMenosSegundos
             // 
-            this.btnMenosSegundos.Location = new System.Drawing.Point(514, 183);
+            this.btnMenosSegundos.Location = new System.Drawing.Point(514, 133);
             this.btnMenosSegundos.Name = "btnMenosSegundos";
             this.btnMenosSegundos.Size = new System.Drawing.Size(32, 29);
             this.btnMenosSegundos.TabIndex = 13;
@@ -189,11 +199,115 @@
             this.timerRelogio.Interval = 1000;
             this.timerRelogio.Tick += new System.EventHandler(this.timerRelogio_Tick);
             // 
+            // labelPomoHoras
+            // 
+            this.labelPomoHoras.AutoSize = true;
+            this.labelPomoHoras.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPomoHoras.Location = new System.Drawing.Point(281, 309);
+            this.labelPomoHoras.Name = "labelPomoHoras";
+            this.labelPomoHoras.Size = new System.Drawing.Size(71, 57);
+            this.labelPomoHoras.TabIndex = 15;
+            this.labelPomoHoras.Text = "00";
+            this.labelPomoHoras.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(344, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 57);
+            this.label6.TabIndex = 16;
+            this.label6.Text = ":";
+            this.label6.Visible = false;
+            // 
+            // labelPomoMinutos
+            // 
+            this.labelPomoMinutos.AutoSize = true;
+            this.labelPomoMinutos.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPomoMinutos.Location = new System.Drawing.Point(365, 309);
+            this.labelPomoMinutos.Name = "labelPomoMinutos";
+            this.labelPomoMinutos.Size = new System.Drawing.Size(71, 57);
+            this.labelPomoMinutos.TabIndex = 17;
+            this.labelPomoMinutos.Text = "00";
+            this.labelPomoMinutos.Visible = false;
+            // 
+            // btnPomodoro
+            // 
+            this.btnPomodoro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPomodoro.Location = new System.Drawing.Point(287, 253);
+            this.btnPomodoro.Name = "btnPomodoro";
+            this.btnPomodoro.Size = new System.Drawing.Size(140, 45);
+            this.btnPomodoro.TabIndex = 18;
+            this.btnPomodoro.Text = "POMODORO";
+            this.btnPomodoro.UseVisualStyleBackColor = true;
+            this.btnPomodoro.Click += new System.EventHandler(this.btnPomodoro_Click);
+            // 
+            // btnOkPomo
+            // 
+            this.btnOkPomo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOkPomo.Location = new System.Drawing.Point(287, 254);
+            this.btnOkPomo.Name = "btnOkPomo";
+            this.btnOkPomo.Size = new System.Drawing.Size(140, 43);
+            this.btnOkPomo.TabIndex = 19;
+            this.btnOkPomo.Text = "OK";
+            this.btnOkPomo.UseVisualStyleBackColor = true;
+            this.btnOkPomo.Visible = false;
+            // 
+            // btnPomoMaisMinutos
+            // 
+            this.btnPomoMaisMinutos.Location = new System.Drawing.Point(398, 363);
+            this.btnPomoMaisMinutos.Name = "btnPomoMaisMinutos";
+            this.btnPomoMaisMinutos.Size = new System.Drawing.Size(32, 29);
+            this.btnPomoMaisMinutos.TabIndex = 21;
+            this.btnPomoMaisMinutos.Text = "+";
+            this.btnPomoMaisMinutos.UseVisualStyleBackColor = true;
+            this.btnPomoMaisMinutos.Visible = false;
+            // 
+            // btnPomoMenosMinutos
+            // 
+            this.btnPomoMenosMinutos.Location = new System.Drawing.Point(367, 363);
+            this.btnPomoMenosMinutos.Name = "btnPomoMenosMinutos";
+            this.btnPomoMenosMinutos.Size = new System.Drawing.Size(32, 29);
+            this.btnPomoMenosMinutos.TabIndex = 20;
+            this.btnPomoMenosMinutos.Text = "-";
+            this.btnPomoMenosMinutos.UseVisualStyleBackColor = true;
+            this.btnPomoMenosMinutos.Visible = false;
+            // 
+            // btnPomoMaisHoras
+            // 
+            this.btnPomoMaisHoras.Location = new System.Drawing.Point(313, 363);
+            this.btnPomoMaisHoras.Name = "btnPomoMaisHoras";
+            this.btnPomoMaisHoras.Size = new System.Drawing.Size(32, 29);
+            this.btnPomoMaisHoras.TabIndex = 23;
+            this.btnPomoMaisHoras.Text = "+";
+            this.btnPomoMaisHoras.UseVisualStyleBackColor = true;
+            this.btnPomoMaisHoras.Visible = false;
+            // 
+            // btnPomoMenosHoras
+            // 
+            this.btnPomoMenosHoras.Location = new System.Drawing.Point(282, 363);
+            this.btnPomoMenosHoras.Name = "btnPomoMenosHoras";
+            this.btnPomoMenosHoras.Size = new System.Drawing.Size(32, 29);
+            this.btnPomoMenosHoras.TabIndex = 22;
+            this.btnPomoMenosHoras.Text = "-";
+            this.btnPomoMenosHoras.UseVisualStyleBackColor = true;
+            this.btnPomoMenosHoras.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 414);
+            this.Controls.Add(this.btnPomoMaisHoras);
+            this.Controls.Add(this.btnPomoMenosHoras);
+            this.Controls.Add(this.btnPomoMaisMinutos);
+            this.Controls.Add(this.btnPomoMenosMinutos);
+            this.Controls.Add(this.btnOkPomo);
+            this.Controls.Add(this.btnPomodoro);
+            this.Controls.Add(this.labelPomoMinutos);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelPomoHoras);
             this.Controls.Add(this.btnMaisSegundos);
             this.Controls.Add(this.btnMenosSegundos);
             this.Controls.Add(this.btnMaisMinutos);
@@ -231,5 +345,14 @@
         private Button btnMaisSegundos;
         private Button btnMenosSegundos;
         private System.Windows.Forms.Timer timerRelogio;
+        private Label labelPomoHoras;
+        private Label label6;
+        private Label labelPomoMinutos;
+        private Button btnPomodoro;
+        private Button btnOkPomo;
+        private Button btnPomoMaisMinutos;
+        private Button btnPomoMenosMinutos;
+        private Button btnPomoMaisHoras;
+        private Button btnPomoMenosHoras;
     }
 }
