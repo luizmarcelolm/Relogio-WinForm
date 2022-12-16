@@ -5,7 +5,8 @@ namespace Relógio
         public int Horas { get; set; }
         public int Minutos { get; set; }
         public int Segundos { get; set; }
-
+        public int HorasPomo { get; set; }
+        public int MinutosPomo { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -13,7 +14,6 @@ namespace Relógio
              Horas = DateTime.Now.Hour;
              Minutos = DateTime.Now.Minute;
              Segundos = DateTime.Now.Second;
-
              labHoras.Text = Convert.ToString(Horas);
              labMinutos.Text = Convert.ToString(Minutos);
              labSegundos.Text = Convert.ToString(Segundos);
@@ -144,6 +144,61 @@ namespace Relógio
             btnPomoMenosMinutos.Visible = true; 
             btnPomodoro.Visible = false;
             btnOkPomo.Visible = true;
+        }
+
+        private void btnOkPomo_Click(object sender, EventArgs e)
+        {
+            btnPomoMaisHoras.Visible = false;
+            btnPomoMaisMinutos.Visible = false;
+            btnPomoMenosHoras.Visible = false;
+            btnPomoMenosMinutos.Visible = false;
+            btnOkPomo.Visible = false;
+            btnPomodoro.Visible = true;
+
+            if (Minutos == Horas)
+            {
+                MessageBox.Show("Alarme!!!");
+            }
+        }
+
+        private void btnPomoMaisMinutos_Click(object sender, EventArgs e)
+        {
+            if (MinutosPomo == 59)
+            {
+                MinutosPomo = 0;
+            }else
+            MinutosPomo++;
+            labelPomoMinutos.Text = Convert.ToString(MinutosPomo).PadLeft(2, '0'); ;
+        }
+
+        private void btnPomoMenosMinutos_Click(object sender, EventArgs e)
+        {
+            if (MinutosPomo == 0)
+            {
+                MinutosPomo = 59;
+            }else
+            MinutosPomo--;
+            labelPomoMinutos.Text = Convert.ToString(MinutosPomo).PadLeft(2, '0'); 
+        }
+
+        private void btnPomoMaisHoras_Click(object sender, EventArgs e)
+        {
+            if (HorasPomo == 23)
+            {
+                HorasPomo = 0;
+            }else
+            HorasPomo++;
+            labelPomoHoras.Text = Convert.ToString(HorasPomo).PadLeft(2, '0');
+        }
+
+        private void btnPomoMenosHoras_Click(object sender, EventArgs e)
+        {
+            if (HorasPomo == 0) 
+            {
+                HorasPomo = 23;
+            }else
+            HorasPomo--;
+            labelPomoHoras.Text = Convert.ToString(HorasPomo).PadLeft(2, '0');
         }
     }
 }

@@ -208,7 +208,6 @@
             this.labelPomoHoras.Size = new System.Drawing.Size(71, 57);
             this.labelPomoHoras.TabIndex = 15;
             this.labelPomoHoras.Text = "00";
-            this.labelPomoHoras.Visible = false;
             // 
             // label6
             // 
@@ -219,7 +218,6 @@
             this.label6.Size = new System.Drawing.Size(34, 57);
             this.label6.TabIndex = 16;
             this.label6.Text = ":";
-            this.label6.Visible = false;
             // 
             // labelPomoMinutos
             // 
@@ -230,7 +228,6 @@
             this.labelPomoMinutos.Size = new System.Drawing.Size(71, 57);
             this.labelPomoMinutos.TabIndex = 17;
             this.labelPomoMinutos.Text = "00";
-            this.labelPomoMinutos.Visible = false;
             // 
             // btnPomodoro
             // 
@@ -253,6 +250,7 @@
             this.btnOkPomo.Text = "OK";
             this.btnOkPomo.UseVisualStyleBackColor = true;
             this.btnOkPomo.Visible = false;
+            this.btnOkPomo.Click += new System.EventHandler(this.btnOkPomo_Click);
             // 
             // btnPomoMaisMinutos
             // 
@@ -263,6 +261,7 @@
             this.btnPomoMaisMinutos.Text = "+";
             this.btnPomoMaisMinutos.UseVisualStyleBackColor = true;
             this.btnPomoMaisMinutos.Visible = false;
+            this.btnPomoMaisMinutos.Click += new System.EventHandler(this.btnPomoMaisMinutos_Click);
             // 
             // btnPomoMenosMinutos
             // 
@@ -273,6 +272,7 @@
             this.btnPomoMenosMinutos.Text = "-";
             this.btnPomoMenosMinutos.UseVisualStyleBackColor = true;
             this.btnPomoMenosMinutos.Visible = false;
+            this.btnPomoMenosMinutos.Click += new System.EventHandler(this.btnPomoMenosMinutos_Click);
             // 
             // btnPomoMaisHoras
             // 
@@ -283,6 +283,7 @@
             this.btnPomoMaisHoras.Text = "+";
             this.btnPomoMaisHoras.UseVisualStyleBackColor = true;
             this.btnPomoMaisHoras.Visible = false;
+            this.btnPomoMaisHoras.Click += new System.EventHandler(this.btnPomoMaisHoras_Click);
             // 
             // btnPomoMenosHoras
             // 
@@ -293,6 +294,7 @@
             this.btnPomoMenosHoras.Text = "-";
             this.btnPomoMenosHoras.UseVisualStyleBackColor = true;
             this.btnPomoMenosHoras.Visible = false;
+            this.btnPomoMenosHoras.Click += new System.EventHandler(this.btnPomoMenosHoras_Click);
             // 
             // Form1
             // 
