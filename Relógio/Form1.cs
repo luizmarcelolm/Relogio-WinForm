@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace Relógio
 {
     public partial class Form1 : Form
@@ -111,6 +113,17 @@ namespace Relógio
 
         private void timerRelogio_Tick(object sender, EventArgs e)
         {
+            if (Horas == HorasPomo && Minutos == MinutosPomo)
+            {
+                timerRelogio.Stop();
+                MessageBox.Show("POMODORO CONCLUÍDO!!!");
+                HorasPomo = 0;
+                MinutosPomo = 0;
+                labelPomoHoras.Text = Convert.ToString(HorasPomo).PadLeft(2, '0');
+                labelPomoMinutos.Text = Convert.ToString(MinutosPomo).PadLeft(2, '0');
+                timerRelogio.Start();
+            }
+            
             if (Segundos == 59)
             {
                 Segundos = 0;
@@ -127,7 +140,7 @@ namespace Relógio
             }
             else
                 Segundos++;
-                
+
             labSegundos.Text = Convert.ToString(Segundos).PadLeft(2, '0');
             labMinutos.Text = Convert.ToString(Minutos).PadLeft(2, '0');
             labHoras.Text = Convert.ToString(Horas).PadLeft(2, '0');
@@ -154,11 +167,6 @@ namespace Relógio
             btnPomoMenosMinutos.Visible = false;
             btnOkPomo.Visible = false;
             btnPomodoro.Visible = true;
-
-            if (Minutos == Horas)
-            {
-                MessageBox.Show("Alarme!!!");
-            }
         }
 
         private void btnPomoMaisMinutos_Click(object sender, EventArgs e)
@@ -199,6 +207,11 @@ namespace Relógio
             }else
             HorasPomo--;
             labelPomoHoras.Text = Convert.ToString(HorasPomo).PadLeft(2, '0');
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
         }
     }
 }
