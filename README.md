@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/109484017/208273351-6a40e0d4-f963-4353-860f-1eb3b8eb338e.png)
 
-# Ao clicar em ajsutar ou pomodoro, a aplicação habilita botões para fazer o ajuste das horas e colocar a horas que ira disparar o alarme do pomodoro.
+# Ao clicar em ajustar ou pomodoro, a aplicação habilita botões para fazer o ajuste das horas e minutos, e a hora que irá disparar o alarme do pomodoro.
 
 ![image](https://user-images.githubusercontent.com/109484017/208319595-e5faedc2-6e81-4d62-ae44-df788e3799c3.png)
 
