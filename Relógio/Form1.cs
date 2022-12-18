@@ -1,9 +1,11 @@
 using System.Media;
+using System.Security.Permissions;
 
 namespace Relógio
 {
     public partial class Form1 : Form
     {
+        public static System.Media.SystemSound? Asterisk { get; }
         public int Horas { get; set; }
         public int Minutos { get; set; }
         public int Segundos { get; set; }
@@ -16,10 +18,14 @@ namespace Relógio
              Horas = DateTime.Now.Hour;
              Minutos = DateTime.Now.Minute;
              Segundos = DateTime.Now.Second;
-             labHoras.Text = Convert.ToString(Horas);
+
+            labHoras.Text = Convert.ToString(Horas);
              labMinutos.Text = Convert.ToString(Minutos);
              labSegundos.Text = Convert.ToString(Segundos);
+
+              
         }
+
 
         private void btnMaisSegundos_Click(object sender, EventArgs e)
         {
@@ -116,13 +122,20 @@ namespace Relógio
             if (Horas == HorasPomo && Minutos == MinutosPomo)
             {
                 timerRelogio.Stop();
+
+                String caminhoAudio = @"C:\Users\luizm\OneDrive\Área de Trabalho\alarme.wav";
+                System.Media.SoundPlayer s = new System.Media.SoundPlayer(caminhoAudio);
+                s.PlaySync();
+                s.Stop();
+
                 MessageBox.Show("POMODORO CONCLUÍDO!!!");
+
                 HorasPomo = 0;
                 MinutosPomo = 0;
                 labelPomoHoras.Text = Convert.ToString(HorasPomo).PadLeft(2, '0');
                 labelPomoMinutos.Text = Convert.ToString(MinutosPomo).PadLeft(2, '0');
                 timerRelogio.Start();
-            }
+             }
             
             if (Segundos == 59)
             {

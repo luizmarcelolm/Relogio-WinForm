@@ -203,6 +203,7 @@
             // 
             this.labelPomoHoras.AutoSize = true;
             this.labelPomoHoras.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPomoHoras.ForeColor = System.Drawing.Color.Red;
             this.labelPomoHoras.Location = new System.Drawing.Point(281, 309);
             this.labelPomoHoras.Name = "labelPomoHoras";
             this.labelPomoHoras.Size = new System.Drawing.Size(71, 57);
@@ -213,6 +214,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(344, 309);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 57);
@@ -223,6 +225,7 @@
             // 
             this.labelPomoMinutos.AutoSize = true;
             this.labelPomoMinutos.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPomoMinutos.ForeColor = System.Drawing.Color.Red;
             this.labelPomoMinutos.Location = new System.Drawing.Point(365, 309);
             this.labelPomoMinutos.Name = "labelPomoMinutos";
             this.labelPomoMinutos.Size = new System.Drawing.Size(71, 57);
