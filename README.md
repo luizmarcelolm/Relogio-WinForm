@@ -1,4 +1,4 @@
-# Relógio digital com despertador
+# RELÓGIO DIGITAL COM ALARME PARA REALIZAR O POMODORO E MELHORAR A PRODUTIVIDADE.
 
 # Essa aplicação foi criada no Visual Studio com windows forms com a finalidade de colocar em prática o conhecimento adquirido nas aulas e vídeos.
 
