@@ -18,7 +18,7 @@
 # Nessa parte habilita os botões de alterar hora, minutos e segundos, devido estarem invisíveis.
 ![image](https://user-images.githubusercontent.com/109484017/208320387-e42852cf-833b-46e2-86c1-174f78a038cf.png)
 
-# Nessa parte é verificado se a hora é igual o setado no pomodoro, caso for é disparado um alerme sonoro e uma mensagem na tela avisando o termino do pomodoro.
+# Nessa parte é verificado se a hora é igual o setado no pomodoro, caso for é disparado um alarme sonoro e uma mensagem na tela avisando o termino do pomodoro.
 ![image](https://user-images.githubusercontent.com/109484017/208320528-a2ac8d3f-a1dd-414e-83de-512c4e5be1cf.png)
 
 
