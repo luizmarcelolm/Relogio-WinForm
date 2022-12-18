@@ -9,7 +9,7 @@
 # Assim que a hora do pomodoro for atingida irá disparar um sinal sonoro e uma mensagem na tela avisando que o pomodoro terminou.
 ![image](https://user-images.githubusercontent.com/109484017/208319868-c6a02af2-9446-49bd-b941-1bd33bc0ab45.png)
 
-# Nessa parte do código a aplicação pela a hora atual do computador e mostra na tela.
+# Nessa parte do código a aplicação pega a hora atual do computador e mostra na tela.
 ![image](https://user-images.githubusercontent.com/109484017/208319996-0b8b7b8d-18c0-4f89-8b01-f45ed6335fee.png)
 
 # Nessa parte é feita uma verificação nos segundos, caso ele seja igual a 59, ele voltará a 0, e caso contrário ele irá incrementar 1 nos segundos. Isso será feito para os minutos também, já as horas a verificação será se a hora é igual a 23 caso for verdadeira irá voltar para 0, caso contrário incrementa 1 na hora.
